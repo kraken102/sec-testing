@@ -9,7 +9,7 @@ curl -b 'PHPSESSID=<id>' http://<SERVER_IP>:<PORT>/
 curl -H 'Cookie: PHPSESSID=<id>' http://<SERVER_IP>:<PORT>/
 curl -X POST -d '{"key":"value"}' -b 'PHPSESSID=<id>' -H 'Content-Type: application/json' http://<SERVER_IP>:<PORT>/example.php
 curl 'http://example.com/example.php' -X POST -H 'Content-Type: application/json' -H 'Cookie: PHPSESSID=<id>' --data-raw '{"key":"value"}'
-curl -X POST http://<SERVER_IP>:<PORT>/api.php/city/ -d '{"key":"value", "key":"value"}' -H 'Content-Type: application/json'
+curl -X POST http://<SERVER_IP>:<PORT>/api.php/example/ -d '{"key":"value", "key":"value"}' -H 'Content-Type: application/json'
 curl ipinfo.io
 
 https://devhints.io/curl
