@@ -1,0 +1,15 @@
+curl -s -O <URL>
+curl -k
+curl -I
+curl -u admin:admin http://<SERVER_IP>:<PORT>/
+curl http://admin:admin@<SERVER_IP>:<PORT>/
+curl -H 'Authorization: Basic <b64 token>' http://<SERVER_IP>:<PORT>/
+curl -X POST -d 'username=admin&password=admin' http://<SERVER_IP>:<PORT>/
+curl -b 'PHPSESSID=<id>' http://<SERVER_IP>:<PORT>/
+curl -H 'Cookie: PHPSESSID=<id>' http://<SERVER_IP>:<PORT>/
+curl -X POST -d '{"key":"value"}' -b 'PHPSESSID=<id>' -H 'Content-Type: application/json' http://<SERVER_IP>:<PORT>/example.php
+curl 'http://example.com/example.php' -X POST -H 'Content-Type: application/json' -H 'Cookie: PHPSESSID=<id>' --data-raw '{"key":"value"}'
+curl -X POST http://<SERVER_IP>:<PORT>/api.php/city/ -d '{"key":"value", "key":"value"}' -H 'Content-Type: application/json'
+curl ipinfo.io
+
+https://devhints.io/curl
