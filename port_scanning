@@ -1,0 +1,3 @@
+sudo masscan -pT:1-65535,U:1-65535 -e <interface> --rate=1000 <IP> | tee ports_raw.txt
+cat ports_raw.txt | cut -d ' ' -f 4 | cut -d '/' -f 1 | tr '\n' ',' | sed 's/,$//' > new_ports.txt
+sudo nmap -p<ports> -sS -sV --version-all -sC -O -v <IP>
